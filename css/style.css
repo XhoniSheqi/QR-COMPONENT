@@ -1,0 +1,119 @@
+/* 
+
+# Front-end Style Guide
+
+## Layout
+
+The designs were created to the following widths:
+
+- Mobile: 375px
+- Desktop: 1440px
+
+## Colors
+
+- White: hsl(0, 0%, 100%)
+- Light gray: hsl(212, 45%, 89%)
+- Grayish blue: hsl(220, 15%, 55%)
+- Dark blue: hsl(218, 44%, 22%)
+
+## Typography
+
+### Body Copy
+
+- Font size (paragraph): 15px
+
+### Font
+
+- Family: [Outfit](https://fonts.google.com/specimen/Outfit)
+- Weights: 400, 700
+
+
+*/
+
+:root {
+    --grayishBlue: hsl(220, 15%, 55%);
+    --darkblue: hsl(218, 44%, 22%);
+    --lightGray: hsl(212, 45%, 89%);
+    --bodyColor: rgb(213, 225, 239);
+    --fw-normal: 400;
+    --fw-bold: 700;
+    --ff-primary: 'Outfit', sans-serif;
+}
+
+* , *::before , *::after {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    background: var(--bodyColor);
+    font-size: 1.5rem;
+    font-family: var(--ff-primary);
+}
+
+/* container */
+
+.container {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.container .qr__card {
+    min-height: 65vh;
+    background: #fff;
+    border-radius: 2rem;
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+}
+
+.container .qr__card .qr__card-head {
+    flex: 1 1 0%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 1.5rem;
+}
+
+.container .qr__card .qr__card-head img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 1rem;
+}
+
+.container .qr__card .qr__card-body {
+    flex: 1 1 0%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.container .qr__card .qr__card-body h3 {
+    font-weight: var(--fw-bold);
+    color: var(--darkblue);
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.container .qr__card .qr__card-body p {
+    font-size: 1.4rem;
+    color: var(--grayishBlue);
+    max-width: 25ch;
+    padding-bottom: 1rem;
+}
+
+@media screen and (max-width: 375px) {
+    .container .qr__card {
+        width: 250px;
+    }
+}
